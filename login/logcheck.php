@@ -1,7 +1,7 @@
 <?php session_start(); ?>
 <?php
-	$username=$_POST["username"];
-	$password=$_POST["password"];	
+	$username=$_get["username"];
+	$password=$_get["password"];	
 	include('dbconnect.php');
 	$sql="select * from login where username='$username' and password='$password'";
 	$res=mysql_query($sql);
